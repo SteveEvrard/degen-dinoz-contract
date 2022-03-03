@@ -60,7 +60,7 @@
      // Useful for deploying to a public network.
      // NB: It's important to wrap the provider as a function.
      rinkeby: {
-      provider: () => new HDWalletProvider(`YOUR_SEED_PHRASE`, `https://rinkeby.infura.io/v3/b83130d2e86b4a1e814500707cc18dc1`),
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://rinkeby.infura.io/v3/b83130d2e86b4a1e814500707cc18dc1`),
       network_id: 4,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
